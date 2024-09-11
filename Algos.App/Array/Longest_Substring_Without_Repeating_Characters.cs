@@ -1,6 +1,5 @@
 ﻿using Algos;
 using System.ComponentModel;
-using System.Diagnostics;
 
 namespace ConsoleApp1.Array
 {
@@ -12,49 +11,23 @@ namespace ConsoleApp1.Array
 
         public int LenghtOfLongestSubstring(string s)
         {
-
-            var stopWatch = new Stopwatch();
-            stopWatch.Start();
-
             if (s.Length == 0) return 0;
-            if (s.Length == 1) return 1;
 
-            var nonRepeatingList = new List<char>();
+            var charSet = new HashSet<char>();
             var max = 0;
+            var left = 0;
 
-            for (int i = 0; i < s.Length; i++)
+            for (var right = 0; right < s.Length; right++)
             {
-                if (!IsRepeating(nonRepeatingList, s[i]))
+                while (charSet.Contains(s[right]))
                 {
-                    nonRepeatingList.Add(s[i]);
+                    charSet.Remove(s[left]);
+                    left++;
                 }
-                else
-                {
-                    max = Math.Max(nonRepeatingList.Count, max);
-                    Console.WriteLine(string.Join("", nonRepeatingList));
-                    var str = s[i];
-                    var nonRepeatingListIndexOf = nonRepeatingList.IndexOf(str);
-                    nonRepeatingList.RemoveRange(0, nonRepeatingListIndexOf);
-                }
+                charSet.Add(s[right]);
+                max = Math.Max(max, right - left + 1);
             }
-
-            max = Math.Max(nonRepeatingList.Count, max);
-            stopWatch.Stop();
-            var time = stopWatch.Elapsed.TotalMilliseconds;
-            System.Diagnostics.Debug.WriteLine(time);
             return max;
-        }
-
-        public bool IsRepeating(List<char> arr, char a)
-        {
-            foreach (char s in arr)
-            {
-                if (s == a)
-                {
-                    return true;
-                };
-            }
-            return false;
         }
     }
 }

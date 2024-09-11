@@ -46,5 +46,16 @@ namespace Algos.Test
 
             Assert.That(actual, Is.EqualTo(expected));
         }
+
+         [Test]
+        public void Test4()
+        {
+            var input = "a";
+            var expected = 1;
+
+            var actual = _logic.LenghtOfLongestSubstring(input);
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
     }
 }
