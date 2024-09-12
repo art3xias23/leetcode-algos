@@ -47,7 +47,7 @@ namespace Algos.Test
             Assert.That(actual, Is.EqualTo(expected));
         }
 
-         [Test]
+        [Test]
         public void Test4()
         {
             var input = "a";
@@ -57,5 +57,6 @@ namespace Algos.Test
 
             Assert.That(actual, Is.EqualTo(expected));
         }
-    }
+
+        }
 }
