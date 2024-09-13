@@ -2,12 +2,12 @@
 
 namespace Algos.Array
 {
-    public class Minimum_Window_Substring
+    public class Minimum_Window_Substring_2
     {
-        [Id(76)]
+        [("SlidingWindow")]
         [Category("SlidingWindow")]
         [StatsAttribute("13/09/24", "01:07:05")]
-        public string MinWindow(string s, string t)
+        public string MinWindow2(string s, string t)
         {
             if (s.Length == 0)
                 return "";

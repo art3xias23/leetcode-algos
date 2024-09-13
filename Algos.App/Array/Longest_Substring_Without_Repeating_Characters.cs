@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace ConsoleApp1.Array
 {
+    [Id(3)]
     [Category("SlidingWindow")]
     [StatsAttribute("11/09/24", "42:10")]
 

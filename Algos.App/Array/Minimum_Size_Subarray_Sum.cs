@@ -4,6 +4,7 @@ namespace Algos.Array
 {
     public class Minimum_Size_Subarray_Sum
     {
+        [Id(209)]
         [Category("SlidingWindow")]
         [StatsAttribute("21/09/24", "34:25")]
         public int MinSubArrayLen(int target, int[] nums)
