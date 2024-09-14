@@ -5,16 +5,15 @@
     {
         public int[] TwoSum(int[] nums, int target)
         {
-            for (var l = 0; l < nums.Length; l++)
-            {
-                for (var r = l + 1; r < nums.Length; r++)
-                {
+            var map = new Dictionary<int, int>();
 
-                    if (nums[l] + nums[r] == target)
-                        return [l, r];
-                }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                var diff = target - nums[i];
+                if (map.ContainsKey(diff)) return [map[diff], i];
+                map.Add(nums[i], i);
             }
-            return [];
+            throw new Exception();
         }
     }
 }
