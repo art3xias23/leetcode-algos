@@ -1,6 +1,9 @@
-﻿namespace Algos.Array
+﻿using System.ComponentModel;
+
+namespace Algos.HashTable
 {
     [Id(1)]
+    [Category("HashTable")]
     public class Two_Sum
     {
         public int[] TwoSum(int[] nums, int target)
