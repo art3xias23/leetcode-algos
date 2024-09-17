@@ -22,7 +22,7 @@ namespace Algos.Tests
     {
         // Example 1
         int input = 19;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsTrue(result);
     }
 
@@ -31,7 +31,7 @@ namespace Algos.Tests
     {
         // Example 2
         int input = 2;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsFalse(result);
     }
 
@@ -40,7 +40,7 @@ namespace Algos.Tests
     {
         // Number 1 is a happy number
         int input = 1;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsTrue(result);
     }
 
@@ -49,7 +49,7 @@ namespace Algos.Tests
     {
         // 4 is part of the cycle in unhappy numbers
         int input = 4;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsFalse(result);
     }
 
@@ -58,7 +58,7 @@ namespace Algos.Tests
     {
         // 7 is a happy number
         int input = 7;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsTrue(result);
     }
 
@@ -67,7 +67,7 @@ namespace Algos.Tests
     {
         // Special case for zero (unhappy)
         int input = 0;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsFalse(result);
     }
 
@@ -76,7 +76,7 @@ namespace Algos.Tests
     {
         // Negative numbers are not typical happy number inputs
         int input = -19;
-        bool result = solution.IsHappy(input);
+        bool result = solution.IsHappy_HashSet(input);
         Assert.IsFalse(result);
     }
     }

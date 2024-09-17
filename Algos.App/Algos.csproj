@@ -15,4 +15,8 @@
     <None Include="EfficientArray.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Algos.Data\Algos.Data.csproj" />
+  </ItemGroup>
+
 </Project>

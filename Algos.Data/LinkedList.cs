@@ -1,14 +1,13 @@
 ﻿namespace Algos.Data
 {
-    public class ListNode<T>
+    public class ListNode
     {
-            public T Value { get;  }
-        public ListNode<T> Next{get;}
-
-        public ListNode(T val)
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
         {
-           Value = val; 
-           Next = null;
+            this.val = val;
+            this.next = next;
         }
     }
 }
