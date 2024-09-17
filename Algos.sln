@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algos.Tests", "Algos.Test\A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algos", "Algos.App\Algos.csproj", "{69938C05-05A9-48FE-8EEC-57B580A3394F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algos.Measure", "Algos.Measure\Algos.Measure.csproj", "{C548FF19-FBE1-47D1-B345-F00E6ED479DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algos.Measure", "Algos.Measure\Algos.Measure.csproj", "{C548FF19-FBE1-47D1-B345-F00E6ED479DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algos.Data", "Algos.Data\Algos.Data.csproj", "{56EF4833-5FF0-4388-A6B3-1F60496EF617}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C548FF19-FBE1-47D1-B345-F00E6ED479DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C548FF19-FBE1-47D1-B345-F00E6ED479DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C548FF19-FBE1-47D1-B345-F00E6ED479DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56EF4833-5FF0-4388-A6B3-1F60496EF617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56EF4833-5FF0-4388-A6B3-1F60496EF617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56EF4833-5FF0-4388-A6B3-1F60496EF617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56EF4833-5FF0-4388-A6B3-1F60496EF617}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
