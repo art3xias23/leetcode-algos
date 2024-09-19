@@ -4,14 +4,14 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class Two_Sum_Tests
+    public class _1_Two_Sum_Tests
     {
-        private Two_Sum _solution;
+        private _1_Two_Sum _solution;
 
         [SetUp]
         public void SetUp()
         {
-            _solution = new Two_Sum();
+            _solution = new _1_Two_Sum();
         }
 
         [Test]

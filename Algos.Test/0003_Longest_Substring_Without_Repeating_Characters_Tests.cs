@@ -1,17 +1,16 @@
-using ConsoleApp1.Array;
 using NUnit.Framework;
 
 namespace Algos.Test
 {
     [TestFixture]
-    public class Longest_Substring_Without_Repeating_Characters_Tests
+    public class _3_Longest_Substring_Without_Repeating_Characters_Tests
     {
-        private Longest_Substring_Without_Repeating_Characters _logic;
+        private _3_Longest_Substring_Without_Repeating_Characters _logic;
 
         [SetUp]
         public void Setup()
         {
-            _logic = new Longest_Substring_Without_Repeating_Characters();
+            _logic = new _3_Longest_Substring_Without_Repeating_Characters();
         }
 
         [Test]

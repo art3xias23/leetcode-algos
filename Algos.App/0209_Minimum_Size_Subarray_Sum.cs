@@ -2,7 +2,7 @@
 
 namespace Algos.Array
 {
-    public class Minimum_Size_Subarray_Sum
+    public class _209_Minimum_Size_Subarray_Sum
     {
         [Id(209)]
         [Category("SlidingWindow")]

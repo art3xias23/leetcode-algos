@@ -1,13 +1,12 @@
-﻿using Algos;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
-namespace ConsoleApp1.Array
+namespace Algos
 {
     [Id(3)]
     [Category("SlidingWindow")]
-    [StatsAttribute("11/09/24", "42:10")]
+    [Stats("11/09/24", "42:10")]
 
-    public class Longest_Substring_Without_Repeating_Characters
+    public class _3_Longest_Substring_Without_Repeating_Characters
     {
 
         public int LenghtOfLongestSubstring(string s)

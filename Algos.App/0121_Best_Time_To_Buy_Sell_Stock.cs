@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace Algos.Greedy_Algorithm
+namespace Algos
 {
-    internal class Best_Time_To_Buy_Sell_Stock
+    internal class _0121_Best_Time_To_Buy_Sell_Stock
     {
         [Id(121)]
         [Category("GreedyAlgorithm")]

@@ -2,7 +2,7 @@
 
 namespace Algos.Array
 {
-    public class Minimum_Window_Substring
+    public class _79_Minimum_Window_Substring
     {
         [Id(76)]
         [Category("SlidingWindow")]

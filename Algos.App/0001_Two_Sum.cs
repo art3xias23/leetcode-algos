@@ -4,7 +4,7 @@ namespace Algos.HashTable
 {
     [Id(1)]
     [Category("HashTable")]
-    public class Two_Sum
+    public class _1_Two_Sum
     {
         public int[] TwoSum(int[] nums, int target)
         {

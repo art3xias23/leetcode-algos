@@ -13,7 +13,7 @@ LengthOfLongestSubstring(input);
 
 void LengthOfLongestSubstring(string s)
 {
-    var logic = new Longest_Substring_Without_Repeating_Characters();
+    var logic = new _3_Longest_Substring_Without_Repeating_Characters();
 
     const int iterations = 10; // Number of runs to average
     double totalElapsedTime = 0;

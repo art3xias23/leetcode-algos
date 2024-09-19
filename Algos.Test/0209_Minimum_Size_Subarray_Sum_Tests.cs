@@ -4,13 +4,13 @@ using NUnit.Framework;
 namespace Algos.Tests
 {
     [TestFixture]
-    public class Minimum_Size_Subarray_Sum_Tests
+    public class _209_Minimum_Size_Subarray_Sum_Tests
     {
-        private Minimum_Size_Subarray_Sum _logic;
+        private _209_Minimum_Size_Subarray_Sum _logic;
         [SetUp]
         public void SetUp()
         {
-            _logic = new Minimum_Size_Subarray_Sum();
+            _logic = new _209_Minimum_Size_Subarray_Sum();
         }
 
         [Test]

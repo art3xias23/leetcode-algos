@@ -4,13 +4,13 @@ using NUnit.Framework;
 namespace Algos.Tests
 {
     [TestFixture]
-    public class Minimum_Window_Substring_Tests
+    public class _79_Minimum_Window_Substring_Tests
     {
-        private Minimum_Window_Substring _logic;
+        private _79_Minimum_Window_Substring _logic;
         [SetUp]
         public void SetUp()
         {
-            _logic = new Minimum_Window_Substring();
+            _logic = new _79_Minimum_Window_Substring();
         }
 
         [Test]
