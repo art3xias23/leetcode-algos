@@ -1,5 +1,6 @@
 ﻿namespace Algos.Tests
 {
+    using Algos.Data;
     using Algos.HashTable;
     using NUnit.Framework;
 
@@ -15,10 +16,13 @@
         [Test]
         public void TwoSum_WhenNumsAre2_7_11_15_AndTargetIs9_Returns0_1()
         {
-            var node1 = new LinkedListNode<int>(2);
-            var node2 = new LinkedListNode<int>(2);
+            var listNode = new ListNode();
+            listNode.val = 5;
 
-            Assert.That(node1, Is.EqualTo(node2));
+            var s = listNode;
+            var f = listNode;
+            s.val = 7;
+            var q = f.val;
         }
     }
 }

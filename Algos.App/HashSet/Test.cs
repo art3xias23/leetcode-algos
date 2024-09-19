@@ -3,8 +3,9 @@ namespace Algos.HashSet
 {
     internal class Test
     {
-        public void T()
+        public void Testt()
         {
+            var linkedList = new List<int>();
         }
     }
 }
