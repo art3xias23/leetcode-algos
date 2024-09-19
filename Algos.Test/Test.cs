@@ -1,7 +1,6 @@
 ﻿namespace Algos.Tests
 {
     using Algos.Data;
-    using Algos.HashTable;
     using NUnit.Framework;
 
     [TestFixture]
