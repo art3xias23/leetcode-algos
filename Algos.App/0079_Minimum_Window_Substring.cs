@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 
-namespace Algos.Array
+namespace Algos
 {
     public class _79_Minimum_Window_Substring
     {
         [Id(76)]
         [Category("SlidingWindow")]
-        [StatsAttribute("13/09/24", "01:07:05")]
+        [Stats("13/09/24", "01:07:05")]
         public string MinWindow(string s, string t)
         {
             if (s.Length == 0)

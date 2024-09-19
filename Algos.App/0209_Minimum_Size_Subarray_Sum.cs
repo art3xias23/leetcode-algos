@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 
-namespace Algos.Array
+namespace Algos
 {
     public class _209_Minimum_Size_Subarray_Sum
     {
         [Id(209)]
         [Category("SlidingWindow")]
-        [StatsAttribute("21/09/24", "34:25")]
+        [Stats("21/09/24", "34:25")]
         public int MinSubArrayLen(int target, int[] nums)
         {
             if (nums.Length == 0) return 0;

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Algos.HashTable
+namespace Algos
 {
     [Id(1)]
     [Category("HashTable")]

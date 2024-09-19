@@ -1,5 +1,4 @@
-﻿
-namespace Algos.HashSet
+﻿namespace Algos
 {
     internal class Test
     {

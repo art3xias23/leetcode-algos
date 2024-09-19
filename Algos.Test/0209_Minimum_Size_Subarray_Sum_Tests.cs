@@ -1,5 +1,4 @@
-﻿using Algos.Array;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Algos.Tests
 {
