@@ -4,7 +4,7 @@ namespace Algos
 {
     public class _206_Reverse_Linked_List
     {
-        public ListNode ReverseList(ListNode head)
+        public ListNode ReverseList_Iteratively(ListNode head)
         {
             if (head == null)
             {
@@ -26,6 +26,23 @@ namespace Algos
             }
 
             return prev;
+        }
+
+        public ListNode ReverseList(ListNode head)
+        {
+            if (head == null || head.next == null)
+            {
+                return head;
+            }
+
+            // Recursive case: reverse the rest of the list
+            ListNode newHead = ReverseList(head.next);
+
+            // Adjust pointers: reverse the current node's next pointer
+            head.next.next = head;
+            head.next = null;
+
+            return newHead;
         }
     }
 }
