@@ -1,4 +1,7 @@
-﻿namespace Algos.SearchAndSort
+﻿using System.Diagnostics.Metrics;
+using System.Net.Http.Headers;
+
+namespace Algos.SearchAndSort
 {
     public class MergeSort
     {
@@ -19,64 +22,65 @@
         {
             if (left < right)
             {
+                var mid = (right + left) / 2;
+
                 counter++;
-                var middle = (left + right) / 2;
+                System.Diagnostics.Debug.WriteLine($"Left{counter}: {string.Join(" ", arr[left..(mid+1)])}");
+                MergeSrt(arr, left, mid, counter);
+                System.Diagnostics.Debug.WriteLine($"Right{counter}: {string.Join(" ", arr[(mid + 1)..(right + 1)])}");
+                MergeSrt(arr, mid + 1, right, counter);
 
-                var indent = new string('\t', counter);
-                System.Diagnostics.Debug.WriteLine($"{indent}Left({counter}): {string.Join(" ", arr[left..(middle+1)])}");
-                MergeSrt(arr, left, middle, counter);
-                System.Diagnostics.Debug.WriteLine($"{indent}Right({counter}): {string.Join(" ", arr[(middle + 1)..(right + 1)])}");
-                MergeSrt(arr, middle + 1, right, counter);
-
-                Merge(arr, left, middle, right);
-
-                System.Diagnostics.Debug.WriteLine($"{indent}Merged({counter}): {string.Join(" ", arr)}");
+                Merge(arr, left, right, mid);
+                System.Diagnostics.Debug.WriteLine($"{string.Join(" ", arr)}");
             }
         }
 
-        //left is the first index of the left array;
-        //right is the last index of the right array;
-        private void Merge(int[] arr, int left, int middle, int right)
+        private void Merge(int[] arr, int left, int right, int mid)
         {
-            int leftSize = middle - left + 1;
-            int rightSize = right - middle;
 
-            var leftArray = new int[leftSize];
-            var rightArray = new int[rightSize];
+            //Set size
+            var leftSize = mid - left + 1;
+            var rightSize = right - mid;
+
+            var leftArr = new int[leftSize];
+            var rightArr = new int[rightSize];
 
             for (int i = 0; i < leftSize; i++)
             {
-                leftArray[i] = arr[left + i];
+                leftArr[i] = arr[i + left];
             }
 
             for (int i = 0; i < rightSize; i++)
             {
-                rightArray[i] = arr[middle + 1 + i];
+                rightArr[i] = arr[mid + 1 + i];
             }
 
-            int iLeft = 0; int iRight = 0; int iMerge = left;
+
+            int iLeft = 0; int iRight = 0; int iMerged = left;
 
             while (iLeft < leftSize && iRight < rightSize)
             {
-                var leftItem = leftArray[iLeft];
-                var rightItem = rightArray[iRight];
-                if (leftItem < rightItem)
+                var leftItem = leftArr[iLeft];
+                var rightItem = rightArr[iRight];
+                if (leftItem > rightItem)
                 {
-                    arr[iMerge++] = leftArray[iLeft++];
+                    arr[iMerged++] = rightArr[iRight++];
                 }
                 else
                 {
-                    arr[iMerge++] = rightArray[iRight++];
+
+                    arr[iMerged++] = leftArr[iLeft++];
                 }
             }
 
             while (iLeft < leftSize)
             {
-                arr[iMerge++] = leftArray[iLeft++];
+                arr[iMerged++] = leftArr[iLeft++];
             }
+
             while (iRight < rightSize)
             {
-                arr[iMerge++] = rightArray[iRight++];
+                arr[iMerged++] = rightArr[iRight++];
             }
         }
     }
