@@ -1,34 +1,44 @@
-﻿namespace Algos.SearchAndSort
+﻿using System.Collections.Concurrent;
+
+namespace Algos.SearchAndSort
 {
     public class QuickSort
     {
-
-        public void Quicksort(int[] arr, int left, int right)
+        public void Sort(int[] arr, int left, int right)
         {
-            if(left < right)
+            if (left < right)
             {
-                int pivot = Partition(arr, left, right);
+                var index = Partition(arr, left, right);
+                Sort(arr, left, index - 1);
+                Sort(arr, index + 1, right);
             }
         }
 
         public int Partition(int[] arr, int left, int right)
         {
-            int pivot = arr[right];
-            int i = left - 1;
+            var val = arr[right];
 
-            for(int j = left; j < right; j++)
+            var i = left - 1;
+
+            for (int j = left; j < right; j++)
             {
-                if (arr[j] <= pivot)
+                var jValue = arr[j];
+
+                if (jValue < val)
                 {
                     i++;
                     Swap(ref arr[i], ref arr[j]);
                 }
             }
+
+            Swap(ref arr[i + 1], ref arr[right]);
+            return i + 1;
         }
 
-        public void Swap(ref int a, ref int b)
+        public void Swap(ref int left, ref int right)
         {
-            (b, a) = (a, b);
+            (left, right) = (right, left);
         }
+
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace Algos.Tests.SearchAndSort
+﻿using Algos.SearchAndSort;
+using NUnit.Framework;
+
+namespace Algos.Tests.SearchAndSort
 {
     internal class QuickSort_Tests
     {
@@ -16,7 +19,7 @@
             int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
@@ -27,7 +30,7 @@
             int[] array = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
             int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
@@ -38,7 +41,7 @@
             int[] array = { 4, 2, 7, 3, 7, 1, 4, 9, 4 };
             int[] expected = { 1, 2, 3, 4, 4, 4, 7, 7, 9 };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
@@ -49,7 +52,7 @@
             int[] array = { 42 };
             int[] expected = { 42 };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
@@ -60,7 +63,7 @@
             int[] array = { };
             int[] expected = { };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
@@ -71,7 +74,18 @@
             int[] array = { 5, 2, 9, 1, 5, 6 };
             int[] expected = { 1, 2, 5, 5, 6, 9 };
 
-            sorter.Quicksort(array, 0, array.Length - 1);
+            sorter.Sort(array, 0, array.Length - 1);
+
+            Assert.AreEqual(expected, array);
+        }
+
+        [Test]
+        public void Test_AnotherUnsortedArray()
+        {
+            int[] array = { 8, 3, 7, 1, 9, 2 };
+            int[] expected = { 1, 2, 3, 7, 8, 9 };
+
+            sorter.Sort(array, 0, array.Length - 1);
 
             Assert.AreEqual(expected, array);
         }
