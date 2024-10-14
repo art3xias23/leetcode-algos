@@ -1,28 +1,22 @@
-﻿namespace Algos.Tests
+﻿using Algos.SearchAndSort;
+using NUnit.Framework;
+
+namespace Algos
 {
-    using Algos.Data;
-    using NUnit.Framework;
-
     [TestFixture]
-    public class Test
+    internal class Test
     {
-
-        [SetUp]
-        public void SetUp()
-        {
-        }
-
         [Test]
-        public void TwoSum_WhenNumsAre2_7_11_15_AndTargetIs9_Returns0_1()
+        public void Sort()
         {
-            var listNode = new ListNode();
-            listNode.val = 5;
+            var test = new TestSort();
 
-            var s = listNode;
-            var f = listNode;
-            s.val = 7;
-            var q = f.val;
+            var arr = new []{3, 8, 9, 1, 5, 3, 7, 9, 2};
+            var actual = test.Sort(arr);
+
+            var expected = new[]{1, 2, 3, 3, 5, 7, 8, 9, 9};
+
+            Assert.That(actual, Is.EqualTo(expected));
         }
     }
 }
-

@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace Algos.SearchAndSort
+﻿namespace Algos.SearchAndSort
 {
     public class QuickSort
     {
@@ -39,6 +37,5 @@ namespace Algos.SearchAndSort
         {
             (left, right) = (right, left);
         }
-
     }
 }

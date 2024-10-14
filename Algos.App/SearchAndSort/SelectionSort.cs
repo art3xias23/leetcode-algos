@@ -2,28 +2,22 @@
 {
     public class SelectionSort
     {
-        public void Sort(int[] initial)
+        public void Sort(int[] arr)
         {
-            for (int i = 0; i < initial.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                var minIndex = i;
-
-                for (int j = i + 1; j < initial.Length; j++)
+                var smallestIndex = i;
+                for (int j = i; j < arr.Length; j++)
                 {
-                    if (initial[minIndex] > initial[j])
-                        minIndex = j;
+                    var jValue = arr[j];
+                    var iValue = arr[smallestIndex];
+                    if (jValue < iValue)
+                        smallestIndex = j;
                 }
 
-                if (minIndex != i)
-                    Swap(initial, i, minIndex);
+                if (smallestIndex > i)
+                    (arr[smallestIndex], arr[i]) = (arr[i], arr[smallestIndex]);
             }
-        }
-
-        private void Swap(int[] init, int left, int right)
-        {
-            var temp = init[left];
-            init[left] = init[right];
-            init[right] = temp;
         }
     }
 }
